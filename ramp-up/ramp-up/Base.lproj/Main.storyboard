@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ramp PlacerVC-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="RampPlacerVC" customModule="ramp_up" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kgI-sm-KeB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iom-f6-qAV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drK-x1-2zP">
+                                <rect key="frame" x="252" y="580" width="107" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="FoB-HI-h7l"/>
+                                    <constraint firstAttribute="width" constant="107" id="LGy-23-ons"/>
+                                </constraints>
+                                <state key="normal" image="rampIcon"/>
+                                <connections>
+                                    <action selector="onRampBtnPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="FKc-zl-hSQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wuh-1M-oto" firstAttribute="bottom" secondItem="drK-x1-2zP" secondAttribute="bottom" constant="16" id="Ni2-tp-pKb"/>
+                            <constraint firstItem="Iom-f6-qAV" firstAttribute="bottom" secondItem="wuh-1M-oto" secondAttribute="bottom" id="Tam-Xn-fPw"/>
+                            <constraint firstItem="wuh-1M-oto" firstAttribute="trailing" secondItem="drK-x1-2zP" secondAttribute="trailing" constant="16" id="UAl-qx-FYq"/>
+                            <constraint firstItem="Iom-f6-qAV" firstAttribute="trailing" secondItem="wuh-1M-oto" secondAttribute="trailing" id="h1M-Tg-tLR"/>
+                            <constraint firstItem="Iom-f6-qAV" firstAttribute="top" secondItem="kgI-sm-KeB" secondAttribute="top" id="qEw-QN-6MX"/>
+                            <constraint firstItem="Iom-f6-qAV" firstAttribute="leading" secondItem="wuh-1M-oto" secondAttribute="leading" id="yoZ-Sf-MO6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wuh-1M-oto"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="Iom-f6-qAV" id="h56-DJ-4O9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="rampIcon" width="107" height="71"/>
+    </resources>
+</document>
